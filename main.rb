@@ -9,10 +9,15 @@ set :database, {adapter: 'postgresql',
 								host: 'localhost'}
 
 
-class Short <ActiveRecord::Base
+class Url < ActiveRecord::Base
   has_many :comments
 end 
 
 class Comment < ActiveRecord::Base
-  belongs_to :short
+  belongs_to :urls
 end 
+
+# get '/' do
+# 	@stories = Story.all
+# 	erb :front_page
+# end

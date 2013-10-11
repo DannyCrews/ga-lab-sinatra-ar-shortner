@@ -1,0 +1,9 @@
+class AddUrlFkToComment < ActiveRecord::Migration
+  def up
+		add_column :comments, :url_id, :integer
+	end
+
+	def down
+		remove_column :comments, :url_id, :integer
+	end
+end
